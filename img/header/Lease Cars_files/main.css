@@ -1,0 +1,112 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; /* Наследует box-sizing от родителя */
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 130%;
+}
+.container {
+  max-width: 1220px; /* Поэтому чтобы избежать такой проблемы, мы увеличили ровно на то кол-во, которое грубо говоря мы взяли */
+  margin: 0 auto; /* top, bottom - 0, right and left - auto */
+  padding: 0 10px; /* Т.к сам контейнер занимает 1200 px, а мы указали paddin 10px слева и справа, то уменьшилось на 20px*/
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  background-color: #151515;
+}
+.header__inner {
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 45px;
+}
+.header-main {
+  background-color: transparent; /* Задний фон цвета нашей шапки становится прозрачным */
+}
+
+.menu__list {
+  display: flex;
+  gap: 35px;
+}
+
+.menu__list-link {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+/* / Header */
+
+/* Footer */
+.footer {
+  background: #151515;
+  padding: 50px 0 32px;
+  color: white;
+}
+.footer__menu {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+.footer__menu-list {
+  max-width: 250px;
+}
+.footer__menu-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+.footer__menu-item + .footer__menu-item {
+  padding-top: 20px;
+}
+.app {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+.footer__copy {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.copy__nav-list {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+/* / Footer */
+
+.main {
+  flex-grow: 1;
+}
