@@ -370,6 +370,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   margin: 0 auto;
+  border: none;
 }
 
 /*  CONTACT US.HTML */
@@ -429,11 +430,10 @@ body {
   padding: 100px 0 150px;
 }
 .tabs__btn {
-  padding: 0 150px;
+  padding: 0 150px 100px;
   display: flex;
   justify-content: space-between;
   gap: 80px;
-  padding-bottom: 100px;
 }
 .tabs__btn-item {
   font-size: 24px;
@@ -513,11 +513,16 @@ body {
   background-color: #fff;
   width: 100%;
 }
-
+.card__img {
+  width: 100%;
+}
 /* ADAPTIVE */
 
 @media (max-width: 1180px) {
   /* будет работать шириной меньше 1180 width px */
+  .tabs__content-item {
+    grid-template-columns: repeat(3, 1fr);
+  }
   .why-lease__list {
     gap: 30px 20px;
   }
@@ -529,9 +534,17 @@ body {
   .video__content {
     width: 100%;
   }
+  .tabs__btn {
+    padding: 0;
+    gap: 20px;
+    padding: 0 0 50px;
+  }
 }
 
 @media (max-width: 860px) {
+  .tabs__content-item {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .menu__btn {
     display: flex;
   }
@@ -610,6 +623,37 @@ body {
   }
 }
 
+@media (max-width: 650px) {
+  .tabs__content-item {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .tabs__btn-item {
+    font-size: 18px;
+  }
+  .blog__items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .blog__item-title {
+    margin-bottom: 10px;
+  }
+  .blog__item-link {
+    margin-left: auto;
+  }
+  .tabs__btn-item {
+    font-size: 14px;
+  }
+  .contacts-form {
+    padding: 50px 0;
+  }
+  .form__input {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .contacts-text {
+    padding: 0;
+  }
+}
+
 @media (max-width: 540px) {
   .top__link {
     font-size: 24px;
@@ -672,5 +716,18 @@ body {
     align-items: center;
     gap: 20px;
   }
+  .tabs__btn {
+    flex-direction: column;
+  }
+  .choose {
+    padding: 50px 0;
+  }
+  .tabs__content-item {
+    gap: 40px;
+  }
+  .blog {
+    padding-bottom: 50px;
+  }
 }
+
 /* / ADAPTIVE */
